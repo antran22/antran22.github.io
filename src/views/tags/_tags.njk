@@ -1,0 +1,14 @@
+---
+pagination:
+    data: collections
+    size: 1
+    alias: tag
+    filter:
+        - all
+        - allPosts
+permalink: /tags/{{ tag }}/
+layout: main.njk
+---
+<h1 class="title">{% postTag availableTags[tag] %}</h1>
+
+{% postList collections[tag] %}

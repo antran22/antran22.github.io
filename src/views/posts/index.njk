@@ -1,0 +1,13 @@
+---
+layout: main.njk
+pagination:
+    data: collections.allPosts
+    size: 2
+---
+<main>
+    <h1 class="title">Blog posts</h1>
+    <div class="container">
+        {% postList pagination.items %}
+        {% paginatedNavigation pagination, page.url %}
+    </div>
+</main>

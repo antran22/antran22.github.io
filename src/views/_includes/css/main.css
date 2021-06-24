@@ -1,0 +1,57 @@
+h1.title {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+#main {
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+nav {
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+#header-nav {
+  margin-bottom: 30px;
+}
+
+#header-nav a {
+  margin: 0 30px;
+}
+
+nav a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+#page-nav a {
+  margin: 0 5px;
+}
+
+.post-entry {
+  margin: 20px 0;
+}
+
+.post-entry-date {
+  margin-bottom: 10px;
+}
+
+.post-tag-span {
+  display: inline-block;
+  padding: 5px;
+  margin-left: 0;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.post-tag-span:hover {
+  background: var(--highlighted-border-color);
+}
+
+.post-tag-link {
+  text-decoration: none;
+}
