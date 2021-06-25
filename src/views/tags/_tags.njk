@@ -1,14 +1,14 @@
 ---
 pagination:
-    data: collections
+    data: collections.pagedPostsByTag
     size: 1
     alias: tag
-    filter:
-        - all
-        - allPosts
-permalink: /tags/{{ tag }}/
+permalink: "{{ tag.href.current }}"
 layout: main.njk
 ---
-<h1 class="title">{% postTag availableTags[tag] %}</h1>
+{% if availableTags[tag.tagName] %}
+    <h1 class="title">{% postTag availableTags[tag.tagName] %}</h1>
+    {% postList tag.posts %}
+    {% paginatedNavigation tag, page.url %}
+{% endif %}
 
-{% postList collections[tag] %}

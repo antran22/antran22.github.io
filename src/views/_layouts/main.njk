@@ -19,13 +19,21 @@ navLinks:
     {% include "css/main.css" %}
 {% endset %}
 
+{% set js %}
+    {% include "js/prettydate.js" %}
+{% endset %}
+
 <style>
     {{ css | cssmin | safe }}
 </style>
 
+<script>
+    {{ js | safe }}
+</script>
+
 <body>
 
-<div class="container" id="main">
+<div class="container" id="main" onload="">
     <nav id="header-nav" class="u-full-width">
         {% for label, path in navLinks %}
             <a

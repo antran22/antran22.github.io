@@ -55,3 +55,7 @@ nav a[aria-current="page"] {
 .post-tag-link {
   text-decoration: none;
 }
+
+.pretty-date {
+  visibility: hidden;
+}

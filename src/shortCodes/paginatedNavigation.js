@@ -4,7 +4,7 @@ module.exports = function paginatedNavigation(pagination, currentPageUrl) {
     <a
         href="${href}"
         ${currentPageUrl === href ? 'aria-current="page"' : ""}
-    >${index}</a>
+    >${index + 1}</a>
     `
   );
 

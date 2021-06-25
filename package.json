@@ -4,14 +4,14 @@
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.2",
     "clean-css": "^5.1.2",
     "html-minifier": "^4.0.0",
-    "nodemon": "^2.0.7",
-    "pretty-date": "^0.2.0",
+    "lodash": "^4.17.21",
     "slugify": "^1.5.3"
   },
   "name": "antran22.github.io",
   "version": "1.0.0",
   "devDependencies": {
-    "prettier": "^2.3.1"
+    "prettier": "^2.3.1",
+    "nodemon": "^2.0.7"
   },
   "scripts": {
     "build": "eleventy",

@@ -4,12 +4,10 @@ layout: main.njk
 <main>
     <h1 class="title">Blog Tags</h1>
     <ul>
-        {%- for tag, posts in collections -%}
-            {% if tag !== "all" and tag !== "allPosts" %}
-                <li>
-                    {% postTagLink availableTags[tag] %}
-                </li>
-            {% endif %}
+        {%- for tag, posts in collections | omitGeneratedCollections -%}
+            <li>
+                {% postTagLink availableTags[tag] %}
+            </li>
         {%- endfor -%}
     </ul>
 </main>

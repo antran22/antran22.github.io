@@ -1,6 +1,4 @@
 const CleanCSS = require("clean-css");
-const prettyDate = require("pretty-date");
-const getSlugFromPost = require("./getSlugFromPost");
 
 module.exports = function addFilters(eleventyConfig) {
   eleventyConfig.addFilter("cssmin", cssMinify);
@@ -8,10 +6,6 @@ module.exports = function addFilters(eleventyConfig) {
   eleventyConfig.addFilter("log", log);
 
   eleventyConfig.addFilter("stringify", stringify);
-
-  eleventyConfig.addFilter("prettyDate", prettyDate.format);
-
-  eleventyConfig.addFilter("getSlugFromPost", require("./getSlugFromPost"));
 };
 
 function cssMinify(code) {
