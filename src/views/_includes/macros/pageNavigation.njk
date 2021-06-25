@@ -1,0 +1,32 @@
+{% macro pageNavigation(pagination, currentPageUrl) %}
+    <nav id="page-nav">
+        {{ jumpPageLink(pagination.href.first, currentPageUrl,  "◀◀" ) }}
+        {{ navLink(pagination.href.previous, "◀") }}
+        {% for href in pagination.hrefs %}
+            <a href="{{ href }}"
+                    {{ "aria-current='page'" if currentPageUrl === href }}
+            >
+                {{ loop.index }}
+            </a>
+        {% endfor %}
+        {{ navLink(pagination.href.next, "▶") }}
+        {{ jumpPageLink(pagination.href.last, currentPageUrl, "▶▶") }}
+    </nav>
+{% endmacro %}
+
+{% macro jumpPageLink(href, currentPage, icon) %}
+    {% if href === currentPage %}
+        {{ navLink(null, icon) }}
+    {% else %}
+        {{ navLink(href, icon) }}
+    {% endif %}
+{% endmacro %}
+
+{% macro navLink(href, icon) %}
+    {% if href %}
+        <a href="{{ href }}">{{ icon }}</a>
+    {% else %}
+        <a style="visibility: hidden">{{ icon }}</a>
+    {% endif %}
+{% endmacro %}
+

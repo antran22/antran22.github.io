@@ -6,9 +6,13 @@ pagination:
 permalink: "{{ tag.href.current }}"
 layout: main.njk
 ---
+{% from "macros/postList.njk" import postList %}
+{% from "macros/postTag.njk" import postTag %}
+{% from "macros/pageNavigation.njk" import pageNavigation %}
+
 {% if availableTags[tag.tagName] %}
-    <h1 class="title">{% postTag availableTags[tag.tagName] %}</h1>
-    {% postList tag.posts %}
-    {% paginatedNavigation tag, page.url %}
+    <h1 class="title">{{ postTag(availableTags[tag.tagName]) }}</h1>
+    {{ postList(tag.posts) }}
+    {{ pageNavigation(pagination, page.url) }}
 {% endif %}
 

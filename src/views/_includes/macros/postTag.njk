@@ -1,0 +1,22 @@
+{% macro postTagBar(post) %}
+    {% set availableTags = post.data.availableTags %}
+    <p>
+        {% for tag in post.data.tags %}
+            {% if availableTags[tag] %}
+                {{ postTagLink(availableTags[tag]) }}
+            {% endif %}
+        {% endfor %}
+    </p>
+{% endmacro %}
+
+{% macro postTagLink(tagInfo) %}
+    <a href="/tags/{{ tagInfo.name }}" class="post-tag-link">
+        {{ postTag(tagInfo) }}
+    </a>
+{% endmacro %}
+
+{% macro postTag(tagInfo) %}
+    <code class="post-tag-span">
+        {{ tagInfo.icon }}&nbsp;{{ tagInfo.name }}
+    </code>
+{% endmacro %}

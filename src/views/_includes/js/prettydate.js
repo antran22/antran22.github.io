@@ -38,7 +38,7 @@ const _formatters = [
   },
   {
     threshold: 1,
-    handler: () => "just now",
+    handler: () => "now",
   },
   { threshold: 60, handler: _createHandler(1, "second", "ago") },
   { threshold: 3600, handler: _createHandler(60, "minute", "ago") },

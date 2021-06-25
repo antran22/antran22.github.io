@@ -1,12 +1,13 @@
 ---
 layout: main.njk
 ---
+{% from "macros/postTag.njk" import postTagLink %}
 <main>
     <h1 class="title">Blog Tags</h1>
     <ul>
         {%- for tag, posts in collections | omitGeneratedCollections -%}
             <li>
-                {% postTagLink availableTags[tag] %}
+                {{  postTagLink(availableTags[tag])  }}
             </li>
         {%- endfor -%}
     </ul>

@@ -1,0 +1,17 @@
+{% from "./postTag.njk" import postTagBar %}
+
+{% macro postList(posts) %}
+    {% for post in posts %}
+        <div class="row post-entry" aria-labelledby="{{ post.fileSlug }}">
+            <h5 id="{{ post.fileSlug }}">
+                <a href="{{ post.url }}">{{ post.data.title }}</a>
+            </h5>
+            <p>
+                <i class="post-entry-date pretty-date">{{ post.date }}</i>
+            </p>
+            {{ postTagBar(post) }}
+            <p>{{ post.data.summary }}</p>
+        </div>
+        <hr/>
+    {% endfor %}
+{% endmacro %}
