@@ -1,6 +1,6 @@
 h1.title {
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 #main {
@@ -58,4 +58,55 @@ nav a[aria-current="page"] {
 
 .pretty-date {
   visibility: hidden;
+}
+
+/* Article Image */
+
+article img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  article img {
+    max-width: 75%;
+  }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  article img {
+    max-width: 60%;
+  }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  article img {
+    max-width: 50%;
+  }
+}
+
+/* Article Audio */
+article audio {
+  display: block;
+  margin: 2em auto;
+}
+
+/* Article Video */
+article video {
+  display: block;
+  margin: 2em auto;
+  border-radius: 5px;
+}
+
+article blockquote {
+  background: var(--highlighted-background-color);
+  font-size: 1.15em;
+  border-radius: 5px;
+  padding: 1.5em;
+  font-style: italic;
 }

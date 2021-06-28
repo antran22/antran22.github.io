@@ -1,4 +1,6 @@
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+
 const addFilters = require("./src/functions");
 const addTransforms = require("./src/transforms");
 const addShortCodes = require("./src/shortCodes");
@@ -10,6 +12,11 @@ module.exports = function (eleventyConfig) {
   addTransforms(eleventyConfig);
   addShortCodes(eleventyConfig);
   addCollections(eleventyConfig);
+
+  eleventyConfig.addPassthroughCopy({
+    "./src/views/_includes/css": "_static/css",
+    "./src/views/_includes/js": "_static/js",
+  });
 
   return {
     markdownTemplateEngine: "njk",
@@ -25,4 +32,5 @@ module.exports = function (eleventyConfig) {
 
 function addPlugins(eleventyConfig) {
   eleventyConfig.addPlugin(inclusiveLangPlugin);
+  eleventyConfig.addPlugin(syntaxHighlight);
 }

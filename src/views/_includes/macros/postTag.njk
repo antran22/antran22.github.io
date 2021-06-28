@@ -1,7 +1,10 @@
 {% macro postTagBar(post) %}
-    {% set availableTags = post.data.availableTags %}
+    {{ postTagBarPlain (post.data.tags, post.data.availableTags)}}
+{% endmacro %}
+
+{% macro postTagBarPlain(tags, availableTags) %}
     <p>
-        {% for tag in post.data.tags %}
+        {% for tag in tags %}
             {% if availableTags[tag] %}
                 {{ postTagLink(availableTags[tag]) }}
             {% endif %}

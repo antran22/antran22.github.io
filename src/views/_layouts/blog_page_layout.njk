@@ -1,0 +1,13 @@
+---
+layout: main_layout.njk
+---
+{% from "macros/postTag.njk" import postTagBarPlain %}
+<main>
+    <article>
+        <h1 class="title">{{ title }}</h1>
+        <div style="text-align: center">
+            {{ postTagBarPlain(tags, availableTags) }}
+        </div>
+        {{ content | safe }}
+    </article>
+</main>

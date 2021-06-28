@@ -1,5 +1,5 @@
 ---
-layout: blog_page
+layout: blog_page_layout.njk
 tags:
   - gpg
   - git

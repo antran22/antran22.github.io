@@ -4,6 +4,7 @@ const allPosts = require("./allPosts");
 
 module.exports = function addCollections(eleventyConfig) {
   eleventyConfig.addCollection("allPosts", allPosts);
+  eleventyConfig.addPassthroughCopy("./src/views/posts/**/*.!(md)")
 
   eleventyConfig.addCollection("pagedPostsByTag", pagedPostsByTag);
 
