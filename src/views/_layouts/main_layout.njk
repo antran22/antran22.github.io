@@ -10,43 +10,59 @@ navLinks:
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
+    {% set css %}
+        {% include "css/normalize.css" %}
+        {% include "css/skeleton.css" %}
+        {% include "css/main.css" %}
+        {% include "css/prism-material-dark.css" %}
+    {% endset %}
+
+    {% set js %}
+        {% include "js/prettydate.js" %}
+    {% endset %}
+
+    <style>
+        {{ css | cssmin | safe }}
+    </style>
+
+    <script>
+        {{ js | safe }}
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css">
 
 </head>
 
-{% set css %}
-    {% include "css/normalize.css" %}
-    {% include "css/skeleton.css" %}
-    {% include "css/main.css" %}
-    {% include "css/prism-material-dark.css" %}
-{% endset %}
-
-{% set js %}
-    {% include "js/prettydate.js" %}
-{% endset %}
-
-<style>
-    {{ css | cssmin | safe }}
-</style>
-
-<script>
-    {{ js | safe }}
-</script>
 
 <body>
-
 <div class="container" id="main" onload="">
-    <nav id="header-nav" class="u-full-width">
-        {% for label, path in navLinks %}
-            <a
-                    href="{{ path }}"
-                    {% if page.url == path %}
-                        aria-current="page"
-                    {% endif %}
-            >{{ label }}</a>
-        {% endfor %}
-    </nav>
-    {{ content | safe }}
+    <header>
+        <nav id="header-nav" class="u-full-width">
+            {% for label, path in navLinks %}
+                <a
+                        href="{{ path }}"
+                        {% if page.url == path %}
+                            aria-current="page"
+                        {% endif %}
+                >{{ label }}</a>
+            {% endfor %}
+        </nav>
+    </header>
+    <main>
+        {{ content | safe }}
+    </main>
+    <footer>
+        <p>
+            Made with ❤️ by antran22 using <a href="https://www.11ty.dev/">11ty</a>
+        </p>
+        <address>
+            Contact Me
+            <br/>
+            <a href="mailto:trancongvietan22@gmail.com"><i class="icon"></i></a>
+            <a href="https://www.linkedin.com/in/antran22/"><i class="icon"></i></a>
+            <a href="https://github.com/antran22/"><i class="icon"></i></a>
+        </address>
+    </footer>
 </div>
 </body>
 

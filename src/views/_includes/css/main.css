@@ -3,11 +3,12 @@ h1.title {
   margin-bottom: 50px;
 }
 
-#main {
+body {
   margin-top: 30px;
   margin-bottom: 100px;
 }
 
+/* Header and Nav Bar */
 nav {
   text-align: center;
 }
@@ -31,6 +32,29 @@ nav a[aria-current="page"] {
 #page-nav a {
   margin: 0 5px;
 }
+/* Main */
+main {
+  margin-top: 30px;
+  min-height: 100vh;
+  margin-bottom: 100px;
+}
+/* Footer */
+
+address {
+  font-style: normal;
+}
+address .icon {
+  font-size: 2em;
+  font-style: normal;
+}
+address a {
+  text-decoration: none;
+}
+footer {
+  text-align: center;
+}
+
+/* Post Entry on Listing */
 
 .post-entry {
   margin: 20px 0;
@@ -63,6 +87,7 @@ nav a[aria-current="page"] {
 /* Article Image */
 
 article img {
+  height: auto;
   display: block;
   max-width: 100%;
   margin: 0 auto;

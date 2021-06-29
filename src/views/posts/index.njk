@@ -7,10 +7,9 @@ pagination:
 {% from "macros/postList.njk" import postList %}
 {% from "macros/pageNavigation.njk" import pageNavigation %}
 
-<main>
-    <h1 class="title">Blog posts</h1>
-    <div class="container">
-        {{ postList(pagination.items) }}
-        {{ pageNavigation(pagination, page.url) }}
-    </div>
-</main>
+<h1 class="title">Blog posts</h1>
+<div class="container">
+    {{ postList(pagination.items) }}
+    {{ pageNavigation(pagination, page.url) }}
+</div>
+

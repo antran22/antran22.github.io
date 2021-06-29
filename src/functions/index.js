@@ -1,11 +1,14 @@
 const CleanCSS = require("clean-css");
+const Image = require("./image");
 
-module.exports = function addFilters(eleventyConfig) {
+module.exports = function addFunctions(eleventyConfig) {
   eleventyConfig.addFilter("cssmin", cssMinify);
 
   eleventyConfig.addFilter("log", log);
 
   eleventyConfig.addFilter("stringify", stringify);
+
+  eleventyConfig.addAsyncShortcode("Image", Image);
 };
 
 function cssMinify(code) {

@@ -3,14 +3,14 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 const addFilters = require("./src/functions");
 const addTransforms = require("./src/transforms");
-const addShortCodes = require("./src/shortCodes");
+const addFunctions = require("./src/functions");
 const addCollections = require("./src/collections");
 
 module.exports = function (eleventyConfig) {
   addPlugins(eleventyConfig);
   addFilters(eleventyConfig);
   addTransforms(eleventyConfig);
-  addShortCodes(eleventyConfig);
+  addFunctions(eleventyConfig);
   addCollections(eleventyConfig);
 
   eleventyConfig.addPassthroughCopy({
