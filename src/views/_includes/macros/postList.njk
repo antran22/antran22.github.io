@@ -10,7 +10,7 @@
                 <i class="post-entry-date pretty-date">{{ post.date }}</i>
             </p>
             {{ postTagBar(post) }}
-            <p>{{ post.data.summary }}</p>
+            <p>{{ post.data.summary | brief }}</p>
         </div>
         <hr/>
     {% endfor %}

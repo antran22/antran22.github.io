@@ -26,11 +26,15 @@ navLinks:
     </style>
 
     <script>
-        {{ js | safe }}
+        {{ js | jsmin | safe }}
     </script>
 
-    <!-- HTML -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@5.2/distr/fira_code.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨🏻‍💻</text></svg>">
 
 </head>
 
@@ -48,24 +52,22 @@ navLinks:
             {% endfor %}
         </nav>
     </header>
-    <hr/>
+
+
     <main>
         {{ content | safe }}
     </main>
+
     <hr/>
     <footer>
-        <address>
-            <h4>Contact Me</h4>
-            <br/>
-            Email: <a href="mailto:trancongvietan22@gmail.com">trancongvietan22@gmail.com</a>
-            <br/>
-            LinkedIn: <a href="https://www.linkedin.com/in/antran22/">antran22</a>
-            <br/>
-            Github: <a href="https://github.com/antran22/">antran22</a>
-        </address>
         <br/>
-        <p style="float: right">
-            Made with ❤️ by antran22 using <a href="https://www.11ty.dev/">11ty</a>
+        <br/>
+        <p id="about">
+            Made with ❤️ by <a href="/">antran22</a> using <a href="https://www.11ty.dev/">11ty</a>
+            <br/>
+            Hosted 100% on Github
+            <br/>
+            View source code <a href="https://github.com/antran22/antran22.github.io">here</a>
         </p>
     </footer>
 </div>

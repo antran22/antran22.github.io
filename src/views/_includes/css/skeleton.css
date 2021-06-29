@@ -34,12 +34,12 @@
   --border-color: black;
   --highlighted-border-color: #1f1f1f;
   --text-color: white;
-  --highlighted-text-color: white;
+  --highlighted-text-color: #7FC29B;
   --code-background-color: #6f6f6f;
 
-  --primary-color: #0fa0ce;
-  --secondary-color: #1eaedb;
-  --tertiary-color: #33c3f0;
+  --primary-color: #C1666B;
+  --secondary-color: #FFBA08;
+  --tertiary-color: #FAF2A1;
 }
 
 /* Grid

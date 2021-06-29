@@ -10,7 +10,16 @@ h4,
 h5,
 h6 {
   font-family: "Roboto Mono", Helvetica, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+b {
+  color: var(--highlighted-text-color);
+}
+
+i {
+  color: var(--tertiary-color);
 }
 
 hr {
@@ -48,27 +57,11 @@ nav a {
   flex-basis: 400px;
 }
 
-/* Larger than mobile */
-@media (min-width: 400px) {
-}
-
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
   #header-nav a {
     flex-basis: 0;
   }
-}
-
-/* Larger than tablet */
-@media (min-width: 750px) {
-}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {
-}
-
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {
 }
 
 nav a[aria-current="page"] {
@@ -78,7 +71,39 @@ nav a[aria-current="page"] {
 #page-nav a {
   margin: 0 5px;
 }
+
 /* Main */
+article h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 60px;
+}
+
+div.toc {
+  background: var(--highlighted-background-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 20px 0 100px 0;
+}
+
+div.toc ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+div.toc li {
+  margin: 0;
+}
+
+@media (min-width: 550px) {
+  div.toc {
+    width: 50%;
+  }
+}
+
 main {
   margin-top: 30px;
   min-height: 100vh;
@@ -94,8 +119,15 @@ address a {
   text-decoration: none;
 }
 
-/* Post Entry on Listing */
+#about {
+  font-size: 0.8em;
+  font-style: italic;
+}
 
+/* Post Entry on Listing */
+#post-list {
+  min-height: 100%;
+}
 .post-entry {
   margin: 20px 0;
 }
@@ -172,6 +204,8 @@ article blockquote {
   background: var(--highlighted-background-color);
   font-size: 1.15em;
   border-radius: 5px;
+  margin-left: 0;
+  margin-right: 0;
   padding: 1.5em;
   font-style: italic;
 }
