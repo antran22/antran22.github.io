@@ -1,7 +1,7 @@
 ---
 navLinks:
     Home: "/"
-    Blog Posts: "/posts/"
+    Posts: "/posts/"
     Tags: "/tags/"
     About: "/about/"
 ---
@@ -22,11 +22,6 @@ navLinks:
     {% endset %}
 
     <style>
-        @font-face {
-            font-family:"FiraCode Mono";
-            src: url("_static/fonts/Fira Code Regular Nerd Font Complete Mono.ttf") /* TTF file for CSS3 browsers */
-        }
-
         {{ css | cssmin | safe }}
     </style>
 
@@ -34,37 +29,44 @@ navLinks:
         {{ js | safe }}
     </script>
 
+    <!-- HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@5.2/distr/fira_code.css">
+
 </head>
 
 
 <body>
 <div class="container" id="main" onload="">
     <header>
-        <nav id="header-nav" class="u-full-width">
+        <nav id="header-nav">
             {% for label, path in navLinks %}
-                <a
-                        href="{{ path }}"
-                        {% if page.url == path %}
-                            aria-current="page"
-                        {% endif %}
-                >{{ label }}</a>
+                <a href="{{ path }}"
+                    {% if page.url == path %}
+                    aria-current="page"
+                    {% endif %}>{{ label }}
+                </a>
             {% endfor %}
         </nav>
     </header>
+    <hr/>
     <main>
         {{ content | safe }}
     </main>
+    <hr/>
     <footer>
-        <p>
+        <address>
+            <h4>Contact Me</h4>
+            <br/>
+            Email: <a href="mailto:trancongvietan22@gmail.com">trancongvietan22@gmail.com</a>
+            <br/>
+            LinkedIn: <a href="https://www.linkedin.com/in/antran22/">antran22</a>
+            <br/>
+            Github: <a href="https://github.com/antran22/">antran22</a>
+        </address>
+        <br/>
+        <p style="float: right">
             Made with ❤️ by antran22 using <a href="https://www.11ty.dev/">11ty</a>
         </p>
-        <address>
-            Contact Me
-            <br/>
-            <a href="mailto:trancongvietan22@gmail.com"><i class="icon"></i></a>
-            <a href="https://www.linkedin.com/in/antran22/"><i class="icon"></i></a>
-            <a href="https://github.com/antran22/"><i class="icon"></i></a>
-        </address>
     </footer>
 </div>
 </body>

@@ -1,14 +1,28 @@
-
-
 h1.title {
   text-align: center;
   margin-bottom: 50px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Mono", Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+hr {
+  border: 1px solid var(--text-color);
+  width: 50%;
+}
+
 body {
   margin-top: 30px;
   margin-bottom: 100px;
-  font-family: "FiraCode Mono", Courier, monospace, sans-serif;
+  font-family: "Fira Code", Courier, monospace, sans-serif;
+  font-variant-ligatures: common-ligatures;
 }
 
 /* Header and Nav Bar */
@@ -21,11 +35,40 @@ nav a {
 }
 
 #header-nav {
+  display: flex;
   margin-bottom: 30px;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 #header-nav a {
-  margin: 0 30px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-basis: 400px;
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  #header-nav a {
+    flex-basis: 0;
+  }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
 }
 
 nav a[aria-current="page"] {
@@ -46,15 +89,9 @@ main {
 address {
   font-style: normal;
 }
-address .icon {
-  font-size: 2em;
-  font-style: normal;
-}
+
 address a {
   text-decoration: none;
-}
-footer {
-  text-align: center;
 }
 
 /* Post Entry on Listing */
