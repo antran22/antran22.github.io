@@ -22,14 +22,17 @@ navLinks:
     {% endset %}
 
     <style>
+        @font-face {
+            font-family:"FiraCode Mono";
+            src: url("_static/fonts/Fira Code Regular Nerd Font Complete Mono.ttf") /* TTF file for CSS3 browsers */
+        }
+
         {{ css | cssmin | safe }}
     </style>
 
     <script>
         {{ js | safe }}
     </script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css">
 
 </head>
 

@@ -14,6 +14,7 @@ module.exports = function (eleventyConfig) {
   addCollections(eleventyConfig);
 
   eleventyConfig.addPassthroughCopy({
+    "./src/views/_includes/fonts": "_static/fonts",
     "./src/views/_includes/css": "_static/css",
     "./src/views/_includes/js": "_static/js",
   });
