@@ -1,3 +1,5 @@
+/* Styling of invididual elements */
+
 h1.title {
   text-align: center;
   margin-bottom: 50px;
@@ -19,12 +21,18 @@ b {
 }
 
 i {
-  color: var(--tertiary-color);
+  color: var(--primary-color);
 }
 
 hr {
   border: 1px solid var(--text-color);
   width: 50%;
+}
+
+@media (min-width: 550px) {
+  p {
+    text-align: justify;
+  }
 }
 
 body {
@@ -45,8 +53,7 @@ nav a {
 
 #header-nav {
   display: flex;
-  margin-bottom: 30px;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -61,6 +68,12 @@ nav a {
 @media (min-width: 550px) {
   #header-nav a {
     flex-basis: 0;
+  }
+}
+
+@media (min-width: 550px) {
+  #header-nav-hr {
+    visibility: hidden;
   }
 }
 
