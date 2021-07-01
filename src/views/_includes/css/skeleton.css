@@ -35,11 +35,14 @@
   --highlighted-border-color: #1f1f1f;
   --text-color: white;
   --highlighted-text-color: #7FC29B;
-  --code-background-color: #6f6f6f;
+  --code-background-color: #1f1f1f;
 
-  --primary-color: #C1666B;
+  --primary-color: #FFA599;
+  --primary-color-highlighted: #FF8170;
   --secondary-color: #FFBA08;
+  --secondary-color-highlighted: #E0A100;
   --tertiary-color: #FAF2A1;
+  --tertiary-color-highlighted: #F7EB64;
 }
 
 /* Grid
@@ -202,7 +205,7 @@ html {
 }
 
 body {
-  font-size: 1.4em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  font-size: 1.6em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
   background: var(--background-color);
