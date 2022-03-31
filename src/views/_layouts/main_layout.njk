@@ -1,9 +1,9 @@
 ---
 navLinks:
-    Home: "/"
-    Posts: "/posts/"
-    Tags: "/tags/"
-    About: "/about/"
+Home: "/"
+Posts: "/posts/"
+Tags: "/tags/"
+About: "/about/"
 ---
 <html lang="en">
 <head>
@@ -19,6 +19,7 @@ navLinks:
 
     {% set js %}
         {% include "js/prettydate.js" %}
+        {% include "js/smoothscrolling.js" %}
     {% endset %}
 
     <style>
@@ -36,7 +37,8 @@ navLinks:
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨🏻‍💻</text></svg>">
+    <link rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨🏻‍💻</text></svg>">
 
 </head>
 
@@ -47,9 +49,9 @@ navLinks:
         <nav id="header-nav">
             {% for label, path in navLinks %}
                 <a href="{{ path }}"
-                    {% if page.url == path %}
+                        {% if page.url == path %}
                     aria-current="page"
-                    {% endif %}>{{ label }}
+                        {% endif %}>{{ label }}
                 </a>
             {% endfor %}
         </nav>
@@ -60,6 +62,7 @@ navLinks:
     <main>
         {{ content | safe }}
     </main>
+
 
     <hr/>
     <footer>
@@ -73,6 +76,23 @@ navLinks:
             View source code <a href="https://github.com/antran22/antran22.github.io">here</a>
         </p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const scrollButton = document.getElementById("scroll-to-top-button")
+            document.addEventListener('scroll', function (e) {
+                const scrollY = window.scrollY;
+                if (scrollY > 100) {
+                    scrollButton.style.opacity = '1';
+                } else {
+                    scrollButton.style.opacity = '0';
+                }
+            });
+        });
+    </script>
+    <div style="position: fixed; bottom: 30px; left: 30px; z-index: 100; transition: 0.5s" id="scroll-to-top-button">
+        <button class="button button-primary" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); this.blur();">Go to top</button>
+    </div>
 </div>
 </body>
 
