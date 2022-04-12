@@ -172,32 +172,23 @@ address a {
 /* Article Image */
 
 article img {
-  height: auto;
-  display: block;
   max-width: 100%;
+  height: auto;
   margin: 0 auto;
   border-radius: 5px;
 }
 
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {
-  article img {
-    max-width: 75%;
-  }
+article figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Larger than tablet */
-@media (min-width: 750px) {
-  article img {
-    max-width: 60%;
-  }
-}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {
-  article img {
-    max-width: 50%;
-  }
+article figure figcaption {
+  font: italic smaller sans-serif;
+  margin-top: 1rem;
+  padding: 3px;
+  text-align: center;
 }
 
 /* Article Audio */

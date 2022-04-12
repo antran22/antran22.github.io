@@ -1,9 +1,9 @@
 ---
 navLinks:
-Home: "/"
-Posts: "/posts/"
-Tags: "/tags/"
-About: "/about/"
+    Home: "/"
+    Posts: "/posts/"
+    Tags: "/tags/"
+    About: "/about/"
 ---
 <html lang="en">
 <head>
@@ -14,18 +14,17 @@ About: "/about/"
         {% include "css/normalize.css" %}
         {% include "css/skeleton.css" %}
         {% include "css/main.css" %}
-        {% include "css/prism-material-dark.css" %}
+        {% include "css/prism.css" %}
     {% endset %}
 
     {% set js %}
+        {% include "js/prism.js" %}
         {% include "js/prettydate.js" %}
         {% include "js/smoothscrolling.js" %}
     {% endset %}
 
     <style>
         {{ css | cssmin | safe }}
-
-
     </style>
 
     <script>
@@ -80,7 +79,7 @@ About: "/about/"
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const scrollButton = document.getElementById("scroll-to-top-button")
-            document.addEventListener('scroll', function (e) {
+            document.addEventListener('scroll', function () {
                 const scrollY = window.scrollY;
                 if (scrollY > 100) {
                     scrollButton.style.opacity = '1';

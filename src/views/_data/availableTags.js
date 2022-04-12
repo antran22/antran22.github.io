@@ -4,9 +4,13 @@ module.exports = function () {
       icon: "🔀",
       title: "Learn version controlling with git",
     },
-    gpg: {
-      icon: "🔑",
-      title: "Digital identity with GnuPG",
+    linux: {
+      icon: "🐧",
+      title: "Linux",
+    },
+    foss: {
+      icon: "🔓",
+      title: "Open Source Movement",
     },
   };
 

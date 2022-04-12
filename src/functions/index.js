@@ -1,5 +1,6 @@
 const CleanCSS = require("clean-css");
 const Image = require("./image");
+const Shell = require("./shell");
 const minifyJS = require("./jsmin");
 module.exports = function addFunctions(eleventyConfig) {
   eleventyConfig.addFilter("cssmin", cssMinify);
@@ -11,6 +12,8 @@ module.exports = function addFunctions(eleventyConfig) {
   eleventyConfig.addFilter("brief", brief);
 
   eleventyConfig.addAsyncShortcode("Image", Image);
+
+  eleventyConfig.addPairedShortcode("Shell", Shell);
 
   eleventyConfig.addFilter("escapeHTML", escapeHTML);
 
