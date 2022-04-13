@@ -1,7 +1,7 @@
 ---
 layout: blog_page_layout.njk
 title: Installing spotifyd on Ubuntu Server
-summary: How to play Spotify on an pre-existing Ubuntu Server instance.
+summary: How to play Spotify on a pre-existing Ubuntu Server instance.
 tags:
   - linux
   - foss
@@ -174,8 +174,9 @@ Those final steps is just for cleaning up everything.
 First, create a configuration file, per this [format](https://spotifyd.github.io/spotifyd/config/File.html).
 I have only set a few variables, just like below.
 
-```toml
+```
 [global]
+
 # Your Spotify account name.
 username = "$SPOTIFY_USER"
 
@@ -217,10 +218,10 @@ systemctl --user enable spotifyd.service
 
 ## Conclusion
 
-This is a very nice pastime activity for me, and the result is very satisfying. Suck it Google Home.
+It was a lot of fun trying to working this out, and the result is very satisfying. Suck it Google Home.
 Here's me playing some music on the new Spotify player.
 
-{% Image "spotifyd/spotify-player.png" "Spotify Client streaming music over to YoungITSpeaker" %}
+{% Image "spotifyd/spotify-player.png", "Spotify Client streaming music over to YoungITSpeaker" %}
 
 If you really want to go headless and control the playback on the server,
 try [Spotify TUI](https://github.com/Rigellute/spotify-tui).
