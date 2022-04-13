@@ -16,13 +16,15 @@ First, I need a Spotify Connect player. There is two approaches to this problem:
 
 - Buying a ready-made Google Home or something similar, but the geek in me had taken a disdain to that approach because:
   - It's kinda costly.
-  - You are bringing another of Google's eavesdropping instrument in your space.
+  - You are paying Google to eavesdrop on you (not that they haven't already been doing it)
 - Build a Spotify Connect player from existing hardware and open source software
+
+You know I'll pick the second option, because if not then why are we even here.
 
 ## The Hardware
 
 I am running a small, old laptop in the office, which, most of the time, only run a few Docker containers.
-So I figure, why don't install Spotify Player on it.
+So I figure, why don't I install Spotify on it.
 
 The pros:
 
@@ -32,6 +34,8 @@ The pros:
 The cons:
 
 - This server is running Ubuntu Server, so no preconfigured audio.
+
+Let's install audio driver then.
 
 ### Installing audio driver on Ubuntu:
 
@@ -210,3 +214,13 @@ sudo cp contrib/spotifyd.service /etc/systemd/user/
 systemctl --user start spotifyd.service
 systemctl --user enable spotifyd.service
 {% endShell %}
+
+## Conclusion
+
+This is a very nice pastime activity for me, and the result is very satisfying. Suck it Google Home.
+Here's me playing some music on the new Spotify player.
+
+{% Image "spotifyd/spotify-player.png" "Spotify Client streaming music over to YoungITSpeaker" %}
+
+If you really want to go headless and control the playback on the server,
+try [Spotify TUI](https://github.com/Rigellute/spotify-tui).
