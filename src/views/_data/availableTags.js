@@ -10,7 +10,7 @@ module.exports = function () {
     },
     foss: {
       icon: "🔓",
-      title: "Open Source Movement",
+      title: "Software that doesn't cost, but gives",
     },
   };
 
