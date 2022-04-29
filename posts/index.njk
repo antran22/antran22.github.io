@@ -1,0 +1,15 @@
+---
+layout: main_layout.njk
+pagination:
+    data: collections.allPosts
+    size: 10
+---
+{% from "macros/postList.njk" import postList %}
+{% from "macros/pageNavigation.njk" import pageNavigation %}
+
+<h1 class="title">Blog posts</h1>
+<div id="post-list" class="container">
+    {{ postList(pagination.items) }}
+</div>
+{{ pageNavigation(pagination, page.url) }}
+
