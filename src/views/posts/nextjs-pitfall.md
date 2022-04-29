@@ -3,7 +3,7 @@ layout: blog_page_layout.njk
 title: Several pitfalls in NextJS development
 summary: How to fix some commonly encountered bug
 tags:
-  - js
+  - writeUp
 ---
 
 ## Incremental Static Generation and Fallback

@@ -1,16 +1,16 @@
 module.exports = function () {
   const tags = {
-    git: {
-      icon: "🔀",
-      title: "Learn version controlling with git",
+    blog: {
+      icon: "📝",
+      title: "Blog"
     },
-    linux: {
-      icon: "🐧",
-      title: "Linux",
+    writeUp: {
+      icon: "📒",
+      title: "Technical Write Up",
     },
     foss: {
       icon: "🔓",
-      title: "Software that doesn't cost, but gives",
+      title: "FOSS",
     },
   };
 

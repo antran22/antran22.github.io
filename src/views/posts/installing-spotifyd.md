@@ -3,8 +3,8 @@ layout: blog_page_layout.njk
 title: Installing spotifyd on Ubuntu Server
 summary: How to play Spotify on a pre-existing Ubuntu Server instance.
 tags:
-  - linux
   - foss
+  - writeUp
 ---
 
 ## Why
