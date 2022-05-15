@@ -1,5 +1,6 @@
 ---
 layout: main_layout.njk
+permalink: "/posts/{{ page.date | permalinkDate }}/{{ page.fileSlug }}/"
 ---
 {% from "macros/postTag.njk" import postTagBarPlain %}
 <style>
@@ -16,6 +17,7 @@ layout: main_layout.njk
 </style>
 <article class="container">
     <h1 class="title">{{ title }}</h1>
+    <h2></h2>
     <hr/>
     <div style="text-align: center">
         {{ postTagBarPlain(tags, availableTags) }}

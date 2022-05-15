@@ -169,10 +169,10 @@ If this command fixes the bug, please let me know at [trancongvietan22@gmail.com
 ### Configuring `Spotifyd`:
 
 If you have finished the step above and is able to play some music on the server, congratulations.
-Those final steps is just for cleaning up everything.
+Those final steps is for cleaning up everything.
 
 First, create a configuration file, per this [format](https://spotifyd.github.io/spotifyd/config/File.html).
-I have only set a few variables, just like below.
+I have only set a few variables, like below.
 
 ```
 [global]

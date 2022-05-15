@@ -11,6 +11,8 @@ module.exports = function addFunctions(eleventyConfig) {
 
   eleventyConfig.addFilter("brief", brief);
 
+  eleventyConfig.addFilter("permalinkDate", permalinkDate);
+
   eleventyConfig.addAsyncShortcode("Image", Image);
 
   eleventyConfig.addPairedShortcode("Shell", Shell);
@@ -42,10 +44,20 @@ function log(value) {
 }
 
 function brief(string) {
+  if (!string) {
+    return "";
+  }
   const tokens = string.split(" ");
   if (tokens.length > 20) {
     const usedTokens = tokens.slice(0, 20);
     return usedTokens.join(" ") + "...";
   }
   return string;
+}
+
+function permalinkDate(date) {
+  if (!date) {
+    return "1970/1/1"
+  }
+  return `${date.getUTCFullYear()}/${date.getUTCMonth()}/${date.getUTCDay()}`
 }
